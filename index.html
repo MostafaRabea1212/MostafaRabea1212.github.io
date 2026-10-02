@@ -2,54 +2,61 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mostafa Rabea — AI/ML Engineer</title>
 <meta name="description" content="Portfolio of Mostafa Rabea Shabaan — AI/ML Engineer specializing in Generative AI, RAG, LLM fine-tuning and Computer Vision.">
-<meta name="theme-color" content="#0a0a0f">
-<meta property="og:title" content="Mostafa Rabea — AI/ML Engineer">
-<meta property="og:description" content="Generative AI, RAG, LLM fine-tuning and Computer Vision projects.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--bg2:#101018;--card:#14141f;--border:#23233a;--text:#e8e8f0;--muted:#9a9ab0;--accent:#7c5cff;--accent2:#00e0c6;--gradient:linear-gradient(135deg,#7c5cff 0%,#00e0c6 100%)}
+:root{
+  --bg:#0a0a0f;
+  --bg2:#101018;
+  --card:#14141f;
+  --border:#23233a;
+  --text:#e8e8f0;
+  --muted:#9a9ab0;
+  --accent:#7c5cff;
+  --accent2:#00e0c6;
+  --gradient:linear-gradient(135deg,#7c5cff 0%,#00e0c6 100%);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden;line-height:1.6}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
 ::selection{background:var(--accent);color:#fff}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:6px}
-.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--accent);color:#fff;padding:8px 16px;border-radius:8px}
-.skip:focus{left:8px}
+.mono{font-family:'JetBrains Mono',monospace}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.75);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top,0px);transition:.3s}
+/* ---------- Nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:.3s}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 28px}
 .logo{font-weight:800;font-size:1.2rem;color:#b7a6ff;letter-spacing:-.3px}
-@supports ((-webkit-background-clip:text) or (background-clip:text)){.logo{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .logo{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+}
 .nav-links{display:flex;gap:30px;list-style:none}
 .nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:.25s;position:relative}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gradient);transition:.3s;border-radius:2px}
-.nav-links a:hover,.nav-links a.active{color:var(--text)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .burger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
 
-.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;padding:130px 28px 80px;text-align:center}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 20% 20%,rgba(124,92,255,.14),transparent 60%),radial-gradient(600px 400px at 80% 80%,rgba(0,224,198,.1),transparent 60%);pointer-events:none}
+/* ---------- Hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:130px 28px 80px;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(600px 400px at 20% 20%,rgba(124,92,255,.14),transparent 60%),
+  radial-gradient(600px 400px at 80% 80%,rgba(0,224,198,.1),transparent 60%);pointer-events:none}
 .hero-content{position:relative;z-index:1;max-width:880px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:rgba(124,92,255,.08);color:var(--accent2);padding:7px 18px;border-radius:100px;font-size:.85rem;font-weight:500;margin-bottom:26px}
 .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 1.8s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 .hero h1{font-size:clamp(2.4rem,6vw,4.3rem);font-weight:800;letter-spacing:-1.5px;line-height:1.12}
-.hero h1 .grad,.sec-title .grad{color:#b7a6ff}
-@supports ((-webkit-background-clip:text) or (background-clip:text)){.hero h1 .grad,.sec-title .grad,.stat-card .num{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}}
-.hero h1 small{display:block;font-size:.62em;font-weight:700;color:var(--muted);letter-spacing:-.5px}
+.hero h1 .grad{color:#b7a6ff}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 .grad{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+}
 .typing{font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--muted);margin:22px 0 10px;min-height:2.2em;font-weight:500}
-.typing .cursor{display:inline-block;width:2px;height:1.1em;vertical-align:-.15em;background:var(--accent2);animation:blink .8s infinite;margin-left:2px}
+.typing .cursor{display:inline-block;width:2px;background:var(--accent2);animation:blink .8s infinite;margin-left:2px}
 @keyframes blink{50%{opacity:0}}
 .hero p.lead{color:var(--muted);max-width:640px;margin:6px auto 38px;font-size:1.02rem}
 .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
@@ -65,13 +72,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.75
 .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.78rem;letter-spacing:2px;animation:float 2.4s ease-in-out infinite}
 @keyframes float{50%{transform:translate(-50%,9px)}}
 
+/* ---------- Sections ---------- */
 section{max-width:1200px;margin:0 auto;padding:100px 28px}
 .sec-tag{display:inline-flex;align-items:center;gap:8px;color:var(--accent2);font-weight:700;font-size:.82rem;letter-spacing:2.5px;text-transform:uppercase;border:1px solid rgba(0,224,198,.35);background:rgba(0,224,198,.07);padding:7px 18px;border-radius:100px}
 .sec-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent2)}
 .sec-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;margin:12px 0 44px}
+.sec-title .grad{color:#b7a6ff}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .sec-title .grad{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+}
+
+/* reveal */
 .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 
+/* ---------- Marquee ---------- */
 .marquee-wrap{padding:36px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:var(--bg2)}
 .marquee{display:flex;gap:56px;width:max-content;animation:scroll 26s linear infinite}
 .marquee-wrap:hover .marquee{animation-play-state:paused}
@@ -80,24 +95,30 @@ section{max-width:1200px;margin:0 auto;padding:100px 28px}
 .m-item b{color:var(--text);font-weight:600}
 .m-star{color:var(--accent);font-size:1.3rem}
 
+/* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:52px;align-items:start}
 .about-grid p{color:var(--muted);margin-bottom:18px}
 .about-grid p strong{color:var(--text)}
 .stat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;margin-bottom:18px;transition:.3s}
 .stat-card:hover{transform:translateY(-4px);border-color:var(--accent)}
 .stat-card .num{font-size:2rem;font-weight:800;color:#b7a6ff}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .stat-card .num{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+}
 .stat-card .lbl{color:var(--muted);font-size:.9rem}
 
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:22px}
+/* ---------- Skills ---------- */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
 .skill-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;transition:.3s}
 .skill-card:hover{transform:translateY(-5px);border-color:rgba(124,92,255,.55);box-shadow:0 14px 36px rgba(0,0,0,.4)}
 .skill-card h3{font-size:1.02rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.ico{width:36px;height:36px;border-radius:10px;background:rgba(124,92,255,.13);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.skill-card h3 .ico{width:36px;height:36px;border-radius:10px;background:rgba(124,92,255,.13);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
 .tags{display:flex;flex-wrap:wrap;gap:9px}
 .tag{background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:100px;font-size:.82rem;font-weight:500;transition:.25s}
 .tag:hover{color:var(--accent2);border-color:var(--accent2);transform:translateY(-2px)}
 
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr));gap:26px}
+/* ---------- Projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.35s}
 .proj-card:hover{transform:translateY(-7px);border-color:rgba(0,224,198,.5);box-shadow:0 20px 50px rgba(0,0,0,.5)}
 .proj-top{padding:26px 26px 0;display:flex;justify-content:space-between;align-items:flex-start}
@@ -106,9 +127,10 @@ section{max-width:1200px;margin:0 auto;padding:100px 28px}
 .proj-link:hover{color:var(--accent2)}
 .proj-card h3{font-size:1.2rem;margin:20px 26px 12px;letter-spacing:-.3px}
 .proj-card>p{color:var(--muted);font-size:.92rem;padding:0 26px;flex:1}
-.proj-tags{padding:18px 26px 8px;display:flex;flex-wrap:wrap;gap:9px}
-.proj-stack{padding:16px 26px 26px;color:var(--accent2);font-family:'JetBrains Mono',monospace;font-size:.74rem;border-top:1px dashed var(--border);margin-top:10px}
+.proj-tags{padding:18px 26px 8px}
+.proj-stack{padding:0 26px 26px;color:var(--accent2);font-family:'JetBrains Mono',monospace;font-size:.74rem;border-top:1px dashed var(--border);padding-top:16px;margin-top:10px}
 
+/* ---------- Education & Certs ---------- */
 .ec-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .ec-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:.3s}
 .ec-card:hover{border-color:rgba(124,92,255,.5);transform:translateY(-4px)}
@@ -120,183 +142,213 @@ section{max-width:1200px;margin:0 auto;padding:100px 28px}
 .cert-item svg{flex-shrink:0;margin-top:3px}
 .cert-item strong{color:var(--text);font-weight:600}
 
+/* ---------- Contact ---------- */
 .contact-box{background:var(--bg2);border:1px solid var(--border);border-radius:24px;padding:60px 44px;text-align:center;position:relative;overflow:hidden}
 .contact-box::before{content:'';position:absolute;inset:0;background:radial-gradient(500px 300px at 50% 0%,rgba(124,92,255,.16),transparent 70%);pointer-events:none}
-.contact-box h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.8px;margin:14px 0}
+.contact-box h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.8px;margin-bottom:14px}
 .contact-box>p{color:var(--muted);max-width:540px;margin:0 auto 34px}
 .contact-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
 .chip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--border);background:var(--card);padding:12px 22px;border-radius:100px;font-size:.9rem;color:var(--muted);transition:.3s}
 .chip:hover{color:var(--text);border-color:var(--accent);transform:translateY(-3px)}
 .chip svg{width:17px;height:17px;fill:var(--accent2)}
-footer{border-top:1px solid var(--border);padding:32px 28px calc(32px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--muted);font-size:.85rem}
+
+footer{border-top:1px solid var(--border);padding:32px 28px;text-align:center;color:var(--muted);font-size:.85rem}
 footer .mono{color:var(--accent2)}
 
 @media(max-width:860px){
-.about-grid,.ec-grid{grid-template-columns:1fr}
-section{padding:80px 20px}
-.contact-box{padding:44px 22px}
-.nav-links{position:fixed;top:64px;right:0;left:0;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--border);padding:22px 28px;gap:18px;transform:translateY(-140%);visibility:hidden;transition:.35s,visibility 0s .35s;z-index:99}
-.nav-links.open{transform:none;visibility:visible;transition:.35s}
-.burger{display:flex}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.marquee,.dot,.scroll-hint,.cursor{animation:none}}
+  .about-grid,.ec-grid{grid-template-columns:1fr}
+  .nav-links{position:fixed;top:64px;right:0;left:0;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--border);padding:22px 28px;gap:18px;transform:translateY(-140%);transition:.35s;z-index:99}
+  .nav-links.open{transform:none}
+  .burger{display:flex}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
 </style>
+<base target="_blank">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="gh" viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C16.3 4.7 17.3 5 17.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5z"/></symbol>
-<symbol id="li" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.16h4.52V23H.24V8.16zM8.34 8.16h4.33v2.03h.06c.6-1.14 2.08-2.34 4.28-2.34 4.57 0 5.41 3.01 5.41 6.92V23h-4.51v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V23H8.34V8.16z"/></symbol>
-<symbol id="ml" viewBox="0 0 24 24"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 8.7L3.6 6h16.8L12 12.7zM3 8.1V18h18V8.1l-9 7.2-9-7.2z"/></symbol>
-<symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
-<symbol id="wa" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6.1-1.6a11.4 11.4 0 0 0 5.4 1.4c6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.6 1 1-3.5-.3-.4a9.4 9.4 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4z"/></symbol>
-</defs></svg>
-<a class="skip" href="#about">Skip to content</a>
 
 <nav>
-<div class="nav-inner">
-<a href="#home" class="logo">Mostafa&nbsp;Rabea<span style="color:var(--accent2)">.</span></a>
-<ul class="nav-links" id="navLinks">
-<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
-</ul>
-<button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-</div>
+  <div class="nav-inner">
+    <a href="#home" class="logo">Mostafa&nbsp;Rabea<span style="color:var(--accent2)">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 
 <header class="hero" id="home">
-<div class="hero-content">
-<div class="hero-badge"><span class="dot"></span> Available for internships &amp; opportunities</div>
-<h1>Mostafa <span class="grad">Rabea</span><small>AI / Machine Learning Engineer</small></h1>
-<div class="typing mono">I build <span id="typed" aria-live="off"></span><span class="cursor"></span></div>
-<p class="lead">Generative AI &amp; ML practitioner with hands-on experience in RAG systems, LLM fine-tuning, and real-time computer vision — building end-to-end pipelines from data to deployment.</p>
-<div class="btn-row">
-<a href="#projects" class="btn btn-primary">View My Work ↓</a>
-<a href="mailto:mostafa6m666@gmail.com" class="btn btn-ghost">Get In Touch</a>
-</div>
-<div class="socials">
-<a href="https://github.com/MostafaRabea1212" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#gh"/></svg></a>
-<a href="https://linkedin.com/in/mostafarabea276" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#li"/></svg></a>
-<a href="mailto:mostafa6m666@gmail.com" aria-label="Email"><svg><use href="#ml"/></svg></a>
-<a href="https://wa.me/201032237270" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
-</div>
-</div>
-<div class="scroll-hint" aria-hidden="true">SCROLL ↓</div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Available for internships &amp; opportunities</div>
+    <h1>Mostafa <span class="grad">Rabea</span><br><span style="font-size:.62em;font-weight:700;color:var(--muted)">AI / Machine Learning Engineer</span></h1>
+    <div class="typing mono">I build <span id="typed"></span><span class="cursor">&nbsp;</span></div>
+    <p class="lead">Generative AI &amp; ML practitioner with hands-on experience in RAG systems, LLM fine-tuning, and real-time computer vision — building end-to-end pipelines from data to deployment.</p>
+    <div class="btn-row">
+      <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+      <a href="mailto:mostafa6m666@gmail.com" class="btn btn-ghost">Get In Touch</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C16.3 4.7 17.3 5 17.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5z"/></svg></a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.16h4.52V23H.24V8.16zM8.34 8.16h4.33v2.03h.06c.6-1.14 2.08-2.34 4.28-2.34 4.57 0 5.41 3.01 5.41 6.92V23h-4.51v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V23H8.34V8.16z"/></svg></a>
+      <a href="mailto:mostafa6m666@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 8.7L3.6 6h16.8L12 12.7zM3 8.1V18h18V8.1l-9 7.2-9-7.2z"/></svg></a>
+      <a href="https://wa.me/201032237270" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6.1-1.6a11.4 11.4 0 0 0 5.4 1.4c6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.6 1 1-3.5-.3-.4a9.4 9.4 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg></a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL ↓</div>
 </header>
 
-<div class="marquee-wrap" aria-hidden="true"><div class="marquee" id="marquee"></div></div>
+<div class="marquee-wrap">
+  <div class="marquee" id="marquee"></div>
+</div>
 
-<main>
 <section id="about">
-<div class="reveal"><span class="sec-tag">About Me</span><h2 class="sec-title">A little bit <span class="grad">about me</span></h2></div>
-<div class="about-grid">
-<div class="reveal">
-<p>I'm an <strong>AI Specialization student</strong> at the Faculty of Computers and Artificial Intelligence, Minia National University (expected graduation 2027), and a hands-on <strong>AI/ML practitioner</strong>.</p>
-<p>I design and build <strong>Generative AI and Machine Learning systems</strong> — including Retrieval-Augmented Generation (RAG), LLM fine-tuning with LoRA, and real-time computer vision pipelines.</p>
-<p>My strength is delivering <strong>end-to-end solutions</strong>: data preparation, model training, inference, vector search, API development, and model serving — using Python and the modern AI stack.</p>
-</div>
-<div class="reveal">
-<div class="stat-card"><div class="num">3+</div><div class="lbl">End-to-end AI projects built &amp; deployed</div></div>
-<div class="stat-card"><div class="num">2.7K</div><div class="lbl">SFT training samples prepared for Arabic LLM fine-tuning</div></div>
-<div class="stat-card"><div class="num">2027</div><div class="lbl">Expected B.Sc. graduation — AI Specialization</div></div>
-</div>
-</div>
+  <div class="reveal">
+    <span class="sec-tag">About Me</span>
+    <h2 class="sec-title">A little bit <span class="grad">about me</span></h2>
+  </div>
+  <div class="about-grid">
+    <div class="reveal">
+      <p>I'm an <strong>AI Specialization student</strong> at the Faculty of Computers and Artificial Intelligence, Minia National University (expected graduation 2027), and a hands-on <strong>AI/ML practitioner</strong>.</p>
+      <p>I design and build <strong>Generative AI and Machine Learning systems</strong> — including Retrieval-Augmented Generation (RAG), LLM fine-tuning with LoRA, and real-time computer vision pipelines.</p>
+      <p>My strength is delivering <strong>end-to-end solutions</strong>: data preparation, model training, inference, vector search, API development, and model serving — using Python and the modern AI stack.</p>
+    </div>
+    <div class="reveal">
+      <div class="stat-card"><div class="num">3+</div><div class="lbl">End-to-end AI projects built &amp; deployed</div></div>
+      <div class="stat-card"><div class="num">2.7K</div><div class="lbl">SFT training samples prepared for Arabic LLM fine-tuning</div></div>
+      <div class="stat-card"><div class="num">2027</div><div class="lbl">Expected B.Sc. graduation — AI Specialization</div></div>
+    </div>
+  </div>
 </section>
 
 <section id="skills">
-<div class="reveal"><span class="sec-tag">My Skills</span><h2 class="sec-title">Tech I <span class="grad">work with</span></h2></div>
-<div class="skills-grid">
-<div class="skill-card reveal"><h3><span class="ico">🧠</span>AI / ML</h3><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span><span class="tag">Hugging Face Transformers</span><span class="tag">Ultralytics YOLO</span></div></div>
-<div class="skill-card reveal"><h3><span class="ico">✨</span>Generative AI</h3><div class="tags"><span class="tag">LangChain</span><span class="tag">LLaMA-Factory</span><span class="tag">LoRA / PEFT</span><span class="tag">vLLM</span><span class="tag">RAG</span><span class="tag">LLM APIs</span></div></div>
-<div class="skill-card reveal"><h3><span class="ico">⚙️</span>Backend &amp; Databases</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">Pydantic</span><span class="tag">Uvicorn</span><span class="tag">MongoDB</span><span class="tag">Qdrant</span><span class="tag">Chroma</span></div></div>
-<div class="skill-card reveal"><h3><span class="ico">👁️</span>Computer Vision</h3><div class="tags"><span class="tag">OpenCV</span><span class="tag">YOLO</span><span class="tag">ByteTrack</span><span class="tag">BoT-SORT</span><span class="tag">DeepOCSORT</span></div></div>
-<div class="skill-card reveal"><h3><span class="ico">📊</span>Data</h3><div class="tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div></div>
-<div class="skill-card reveal"><h3><span class="ico">🛠️</span>Tools &amp; Deployment</h3><div class="tags"><span class="tag">Docker</span><span class="tag">Git &amp; GitHub</span><span class="tag">Postman</span><span class="tag">Weights &amp; Biases</span></div></div>
-</div>
+  <div class="reveal">
+    <span class="sec-tag">My Skills</span>
+    <h2 class="sec-title">Tech I <span class="grad">work with</span></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal"><h3><span class="ico">🐍</span>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Problem Solving</span></div></div>
+    <div class="skill-card reveal"><h3><span class="ico">🧠</span>AI / ML</h3><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span><span class="tag">Hugging Face Transformers</span><span class="tag">Ultralytics YOLO</span></div></div>
+    <div class="skill-card reveal"><h3><span class="ico">✨</span>Generative AI</h3><div class="tags"><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Fine-Tuning</span><span class="tag">LLaMA-Factory</span><span class="tag">LoRA / PEFT</span><span class="tag">vLLM</span><span class="tag">RAG</span><span class="tag">LLM APIs</span></div></div>
+    <div class="skill-card reveal"><h3><span class="ico">⚙️</span>Backend &amp; Databases</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">Pydantic</span><span class="tag">Uvicorn</span><span class="tag">MongoDB</span><span class="tag">Qdrant</span><span class="tag">Chroma</span></div></div>
+    <div class="skill-card reveal"><h3><span class="ico">👁️</span>Computer Vision</h3><div class="tags"><span class="tag">OpenCV</span><span class="tag">YOLO26</span><span class="tag">ByteTrack</span><span class="tag">BoT-SORT</span><span class="tag">DeepOCSORT</span></div></div>
+    <div class="skill-card reveal"><h3><span class="ico">🛠️</span>Data &amp; Tools</h3><div class="tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Docker</span><span class="tag">Git &amp; GitHub</span><span class="tag">Postman</span><span class="tag">Weights &amp; Biases</span></div></div>
+  </div>
 </section>
 
 <section id="projects">
-<div class="reveal"><span class="sec-tag">My Projects</span><h2 class="sec-title">Featured <span class="grad">projects</span></h2></div>
-<div class="proj-grid">
-<article class="proj-card reveal">
-<div class="proj-top"><div class="proj-icon">📚</div><a class="proj-link" href="https://github.com/MostafaRabea1212" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-<h3>Mini RAG System</h3>
-<p>Production-oriented RAG backend with FastAPI — async document ingestion (PDF/TXT), Qdrant semantic search, and context-aware Q&amp;A with a modular LLM provider architecture (OpenAI, Groq, Cohere, local) and multilingual Arabic/English prompt templates.</p>
-<div class="proj-tags"><span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">MongoDB</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Docker</span></div>
-<div class="proj-stack">Python · FastAPI · MongoDB · Motor · Qdrant · OpenAI · Groq · Cohere · AsyncIO</div>
-</article>
-<article class="proj-card reveal">
-<div class="proj-top"><div class="proj-icon">🗞️</div><a class="proj-link" href="https://github.com/MostafaRabea1212" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-<h3>Arabic News LLM Fine-Tuning &amp; Serving</h3>
-<p>End-to-end fine-tuning of Qwen2.5-1.5B-Instruct with LoRA (rank 64) via LLaMA-Factory on ~2,700 synthetic SFT samples generated with GPT-OSS-120B — trained with BF16, cosine LR and W&amp;B tracking, then served with vLLM's OpenAI-compatible API.</p>
-<div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">Qwen2.5</span><span class="tag">LoRA</span><span class="tag">vLLM</span><span class="tag">W&amp;B</span></div>
-<div class="proj-stack">Python · PyTorch · Hugging Face · LLaMA-Factory · SFT · Groq · CUDA</div>
-</article>
-<article class="proj-card reveal">
-<div class="proj-top"><div class="proj-icon">🎥</div><a class="proj-link" href="https://github.com/MostafaRabea1212" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-<h3>Real-Time Object Detection &amp; Tracking</h3>
-<p>Real-time detection and multi-object tracking with YOLO26 &amp; OpenCV for webcam and video streams. Fine-tuned on a custom emotion dataset, compared ByteTrack / BoT-SORT / DeepOCSORT, with persistent track IDs, trajectories and multithreaded pipelines.</p>
-<div class="proj-tags"><span class="tag">YOLO26</span><span class="tag">OpenCV</span><span class="tag">Tracking</span><span class="tag">Segmentation</span><span class="tag">Pose Estimation</span></div>
-<div class="proj-stack">Python · Ultralytics · PyTorch · ByteTrack · BoT-SORT · CUDA</div>
-</article>
-</div>
+  <div class="reveal">
+    <span class="sec-tag">My Projects</span>
+    <h2 class="sec-title">Featured <span class="grad">projects</span></h2>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card reveal">
+      <div class="proj-top"><div class="proj-icon">📚</div><a class="proj-link" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3>Mini RAG System</h3>
+      <p>Production-oriented RAG backend with FastAPI — async document ingestion (PDF/TXT), Qdrant semantic search, and context-aware Q&amp;A with a modular LLM provider architecture (OpenAI, Groq, Cohere, local) and multilingual Arabic/English prompt templates.</p>
+      <div class="proj-tags"><span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">MongoDB</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Docker</span></div>
+      <div class="proj-stack">Python · FastAPI · MongoDB · Motor · Qdrant · OpenAI · Groq · Cohere · AsyncIO</div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-top"><div class="proj-icon">🗞️</div><a class="proj-link" href="https://github.com/" target="_blank" rel="noopener">Colab ↗</a></div>
+      <h3>Arabic News LLM Fine-Tuning &amp; Serving</h3>
+      <p>End-to-end fine-tuning of Qwen2.5-1.5B-Instruct with LoRA (rank 64) via LLaMA-Factory on ~2,700 synthetic SFT samples generated with GPT-OSS-120B — trained with BF16, cosine LR and W&amp;B tracking, then served with vLLM's OpenAI-compatible API.</p>
+      <div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">Qwen2.5</span><span class="tag">LoRA</span><span class="tag">vLLM</span><span class="tag">W&amp;B</span></div>
+      <div class="proj-stack">Python · PyTorch · Hugging Face · LLaMA-Factory · SFT · Groq · CUDA</div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-top"><div class="proj-icon">🎥</div><a class="proj-link" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <h3>Real-Time Object Detection &amp; Tracking</h3>
+      <p>Real-time detection and multi-object tracking with YOLO26 &amp; OpenCV for webcam and video streams. Fine-tuned on a custom emotion dataset, compared ByteTrack / BoT-SORT / DeepOCSORT, with persistent track IDs, trajectories and multithreaded pipelines.</p>
+      <div class="proj-tags"><span class="tag">YOLO26</span><span class="tag">OpenCV</span><span class="tag">Tracking</span><span class="tag">Segmentation</span><span class="tag">Pose Estimation</span></div>
+      <div class="proj-stack">Python · Ultralytics · PyTorch · ByteTrack · BoT-SORT · CUDA</div>
+    </div>
+  </div>
 </section>
 
 <section id="education">
-<div class="reveal"><span class="sec-tag">Education &amp; Certifications</span><h2 class="sec-title">Background &amp; <span class="grad">certifications</span></h2></div>
-<div class="ec-grid">
-<div class="ec-card reveal"><span class="date">Expected 2027</span><h3>B.Sc. in Artificial Intelligence</h3><p>Faculty of Computers and Artificial Intelligence, Minia National University — AI Specialization.</p></div>
-<div class="ec-card reveal"><h3 style="margin-top:0">Certifications 🏅</h3>
-<div class="cert-list">
-<div class="cert-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00e0c6" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Machine Learning Specialization</strong> — DeepLearning.AI / Andrew Ng</span></div>
-<div class="cert-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00e0c6" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Deep Learning Specialization</strong> — DeepLearning.AI / Andrew Ng</span></div>
-</div></div>
-</div>
+  <div class="reveal">
+    <span class="sec-tag">Education &amp; Certifications</span>
+    <h2 class="sec-title">Background &amp; <span class="grad">certifications</span></h2>
+  </div>
+  <div class="ec-grid">
+    <div class="ec-card reveal">
+      <span class="date">2023 — 2027 (Expected)</span>
+      <h3>B.Sc. in Artificial Intelligence</h3>
+      <p>Faculty of Computers and Artificial Intelligence, Minia National University — AI Specialization.</p>
+    </div>
+    <div class="ec-card reveal">
+      <h3 style="margin-top:0">Certifications 🏅</h3>
+      <div class="cert-list">
+        <div class="cert-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00e0c6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Machine Learning Specialization</strong> — DeepLearning.AI / Andrew Ng</span></div>
+        <div class="cert-item"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00e0c6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Deep Learning Specialization</strong> — DeepLearning.AI / Andrew Ng</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<div class="contact-box reveal">
-<span class="sec-tag">Get In Touch</span>
-<h2>Let's build something <span style="color:#b7a6ff">intelligent</span> together</h2>
-<p>Open to internships, freelance AI/ML projects, and collaboration. My inbox is always open — I'll get back to you as soon as I can.</p>
-<div class="contact-chips">
-<a class="chip" href="mailto:mostafa6m666@gmail.com"><svg aria-hidden="true"><use href="#ml"/></svg>mostafa6m666@gmail.com</a>
-<a class="chip" href="tel:+201032237270"><svg aria-hidden="true"><use href="#ph"/></svg>+20 103 223 7270</a>
-<a class="chip" href="https://linkedin.com/in/mostafarabea276" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#li"/></svg>LinkedIn</a>
-<a class="chip" href="https://github.com/MostafaRabea1212" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#gh"/></svg>GitHub</a>
-<a class="chip" href="https://wa.me/201032237270" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
-</div>
-</div>
+  <div class="contact-box reveal">
+    <span class="sec-tag">Get In Touch</span>
+    <h2>Let's build something <span style="color:#b7a6ff">intelligent</span> together</h2>
+    <p>Open to internships, freelance AI/ML projects, and collaboration. My inbox is always open — I'll get back to you as soon as I can.</p>
+    <div class="contact-chips">
+      <a class="chip" href="mailto:mostafa6m666@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 8.7L3.6 6h16.8L12 12.7z"/></svg>mostafa6m666@gmail.com</a>
+      <a class="chip" href="tel:+201032237270"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>+20 103 223 7270</a>
+      <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.16h4.52V23H.24V8.16zM8.34 8.16h4.33v2.03h.06c.6-1.14 2.08-2.34 4.28-2.34 4.57 0 5.41 3.01 5.41 6.92V23h-4.51v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V23H8.34V8.16z"/></svg>LinkedIn</a>
+      <a class="chip" href="https://github.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C16.3 4.7 17.3 5 17.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5z"/></svg>GitHub</a>
+      <a class="chip" href="https://wa.me/201032237270" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6.1-1.6a11.4 11.4 0 0 0 5.4 1.4c6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm5.2 13.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2 1 2.9.8 3.3.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg>WhatsApp · MostafaRabea276</a>
+    </div>
+  </div>
 </section>
-</main>
 
 <footer>Designed &amp; built by <span class="mono">Mostafa Rabea</span> © 2026 — Cairo, Egypt 🇪🇬</footer>
 
 <script>
-var phrases=["RAG Systems 🧩","LLM Fine-Tuning ✨","Computer Vision 👁️","GenAI Applications 🚀","End-to-End ML Pipelines ⚙️"].map(function(p){return Array.from(p)});
-var typedEl=document.getElementById('typed'),pi=0,ci=0,del=false;
+// typing effect
+const phrases = ["RAG Systems 🧩","LLM Fine-Tuning ✨","Computer Vision 👁️","GenAI Applications 🚀","End-to-End ML Pipelines ⚙️"];
+const typedEl = document.getElementById('typed');
+let pi=0, ci=0, deleting=false;
 function type(){
-var cur=phrases[pi];typedEl.textContent=cur.slice(0,ci).join('');
-if(!del){if(ci<cur.length){ci++;setTimeout(type,70)}else{del=true;setTimeout(type,1600)}}
-else{if(ci>0){ci--;setTimeout(type,38)}else{del=false;pi=(pi+1)%phrases.length;setTimeout(type,350)}}}
+  const cur = phrases[pi];
+  typedEl.textContent = cur.slice(0, ci);
+  if(!deleting){
+    if(ci < cur.length){ ci++; setTimeout(type, 70); }
+    else { deleting = true; setTimeout(type, 1600); }
+  } else {
+    if(ci > 0){ ci--; setTimeout(type, 38); }
+    else { deleting = false; pi = (pi+1) % phrases.length; setTimeout(type, 350); }
+  }
+}
 type();
 
-var skills=["Python","FastAPI","PyTorch","TensorFlow","Hugging Face","LangChain","Qdrant","MongoDB","YOLO","OpenCV","vLLM","LoRA","Docker","Git","Pandas","NumPy"];
-var group=skills.map(function(s){return '<span class="m-item"><b>'+s+'</b><span class="m-star">✦</span></span>'}).join('');
-document.getElementById('marquee').innerHTML=group+group;
+// skills marquee
+const skills = ["Python","FastAPI","PyTorch","TensorFlow","Hugging Face","LangChain","LangGraph","Fine-Tuning","Qdrant","MongoDB","YOLO","OpenCV","vLLM","LoRA","Docker","Git","Pandas","NumPy"];
+const mq = document.getElementById('marquee');
+const group = skills.map(s=>`<span class="m-item"><b>${s}</b><span class="m-star">✦</span></span>`).join('');
+mq.innerHTML = group + group;
 
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// scroll reveal
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-var burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
-function setMenu(o){burger.classList.toggle('open',o);navLinks.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)}
-burger.addEventListener('click',function(){setMenu(!navLinks.classList.contains('open'))});
-navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
-
-var links=navLinks.querySelectorAll('a');
-var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
-document.querySelectorAll('main section').forEach(function(s){spy.observe(s)});
+// mobile menu
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click',()=>{
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  burger.classList.remove('open'); navLinks.classList.remove('open');
+}));
 </script>
 </body>
 </html>
